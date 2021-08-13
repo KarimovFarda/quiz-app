@@ -15,7 +15,6 @@ let decreasingTime = setInterval(() => {
         getNewQuestion()
     }
 },1000)
-fetch("https://api.npoint.io/02fc6b9a8f526b6a856f").then(response => response.json()).then(data => console.log(data))
 let currentQuestion = {}
 let accepingAnswers = true
 let score = 0
@@ -84,6 +83,3 @@ incrementScore = num => {
 startGame()
 }
 
-/* Features should be added */
-// Different Language
-// Select questions by category
