@@ -7,7 +7,7 @@ const remainedTime = document.querySelector("#time")
 
 const category = document.querySelector("#category")
 let time = 15
-fetch('https://api.npoint.io/02fc6b9a8f526b6a856f').then(response => response.json()).then(data => localStorage.setItem("data",JSON.stringify(data)))
+fetch('data.json').then(response => response.json()).then(data => localStorage.setItem("data",JSON.stringify(data)))
 
 sessionStorage.setItem('time',time)
 remainedTime.innerText = `Remained Time : ${time}`
