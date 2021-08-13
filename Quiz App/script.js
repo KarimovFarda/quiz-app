@@ -4,8 +4,11 @@ const progressText = document.querySelector("#progressText")
 const scoreText = document.querySelector("#score")
 const progressBarFull = document.querySelector("#progressBarFull")
 const remainedTime = document.querySelector("#time")
+
 const category = document.querySelector("#category")
 let time = 15
+fetch('https://api.npoint.io/02fc6b9a8f526b6a856f').then(response => response.json()).then(data => localStorage.setItem("data",JSON.stringify(data)))
+
 sessionStorage.setItem('time',time)
 remainedTime.innerText = `Remained Time : ${time}`
 let decreasingTime = setInterval(() => {
@@ -21,7 +24,6 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 var questions = JSON.parse(localStorage.getItem("data"));
-fetch('https://api.npoint.io/02fc6b9a8f526b6a856f').then(response => response.json()).then(data => localStorage.setItem("data",JSON.stringify(data)))
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = questions.length
 if(questions){
