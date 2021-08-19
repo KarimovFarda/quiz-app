@@ -61,8 +61,7 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.innerText
 
         let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"
-        console.log(selectedAnswer)
-        console.log(currentQuestion.answer)
+
         if(classToApply === 'correct'){
             incrementScore(SCORE_POINTS)
             time = sessionStorage.getItem("time")
