@@ -164,6 +164,11 @@
                 height: 688px;
             }
 
+            @media (max-width:576px) {
+                padding-bottom: 40px;
+            }
+
+
 
             h2 {
                 color: #FFFFFF;
@@ -200,6 +205,26 @@
                 }
             }
 
+            .row.mt-5 {
+
+                margin: 128px 0 !important;
+                position: relative;
+                left: 35px;
+
+                .col-12 {
+                    padding: 0 12px;
+                }
+
+                @media (max-width:576px) {
+                    left: 0;
+                    margin: 0 !important;
+
+                    .col-12 {
+                        padding: 0 !important;
+                    }
+                }
+            }
+
             .col-12:first-child {
                 position: relative;
                 top: 106px;
@@ -221,7 +246,111 @@
                 }
 
             }
+
+            &+.container {
+                margin-top: 700px;
+
+                h1 {
+                    text-transform: capitalize;
+                    color: @mainColor;
+                    .fontProperties(700, 66px, 64px);
+                }
+
+                button {
+                    .fontProperties(700, 14px, 17px);
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: @mainColor;
+                    padding: 15px 38px;
+                    background-color: #ffffff;
+                    border: 1px solid @mainColor;
+                    border-radius: 4px;
+                }
+
+                &>.row:last-child {
+                    margin-top: 80px;
+
+                    .col-7 {
+                        padding-top: 48px;
+                        padding-left: 37px;
+
+                        h2 {
+                            color: #FFFFFF;
+                            .fontProperties(700, 40px, 48px);
+
+                        }
+
+                        p {
+                            .fontProperties(400, 20px, 40px);
+                            text-align: justify;
+                            color: #D2D2D2;
+                        }
+                    }
+
+                    div {
+                        height: 416px;
+
+                        &.col-4 {
+                            .card {
+                                padding-top: 48px;
+                                padding-right: 48px;
+                                padding-left: 48px;
+
+                                img{
+                                    width: 206px;
+                                    height: 206px;
+                                    display: block;
+                                    margin-left: auto
+                                }
+                                h2 {
+                                    .fontProperties(700, 40px, 41px);
+                                    color: @mainColor;
+                                    margin-top: 51px;
+                                    text-align: right;
+                                }
+                                &.card__odd{
+                                    h2{
+                                        color:#FFFFFF ;
+                                    }
+                                
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            &+div {
+                                img {
+                                    display: block;
+                                    margin-left: auto;
+                                }
+                            }
+                        }
+
+                        .card {
+                            border: none;
+
+                            &.card__even {
+                                background: #FFF2E6;
+                                box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.04);
+                                border-radius: 4px;
+                            }
+
+                            &.card__odd {
+                                background: @mainColor;
+                                mix-blend-mode: normal;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width:576px) {
+                    margin-top: 50px !important;
+                }
+            }
         }
+
+
     }
 
     .ps-5 {
