@@ -250,6 +250,7 @@
             &+.container {
                 margin-top: 700px;
 
+
                 h1 {
                     text-transform: capitalize;
                     color: @mainColor;
@@ -296,23 +297,25 @@
                                 padding-right: 48px;
                                 padding-left: 48px;
 
-                                img{
+                                img {
                                     width: 206px;
                                     height: 206px;
                                     display: block;
                                     margin-left: auto
                                 }
+
                                 h2 {
                                     .fontProperties(700, 40px, 41px);
                                     color: @mainColor;
                                     margin-top: 51px;
                                     text-align: right;
                                 }
-                                &.card__odd{
-                                    h2{
-                                        color:#FFFFFF ;
+
+                                &.card__odd {
+                                    h2 {
+                                        color: #FFFFFF;
                                     }
-                                
+
                                 }
                             }
                         }
@@ -344,8 +347,87 @@
                     }
                 }
 
+
                 @media (max-width:576px) {
                     margin-top: 50px !important;
+                }
+
+                &+.container {
+                    margin-top: 154px;
+
+                    &>.row:first-child {
+                        margin-bottom: 88px;
+
+                        &+.row {
+                            .card {
+                                height: 352px;
+                                border: none;
+                            }
+
+                            .col-5 {
+                                .col-12 {
+                                    .card {
+                                        background: #FFF2E6;
+                                        border-radius: 4px;
+                                    }
+
+                                }
+
+                                .col-6 {
+                                    background: #FFFFFF;
+                                    box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.04);
+                                    border-radius: 4px;
+                                    display: block;
+                                    margin-left: auto;
+                                    margin-top: 32px;
+                                }
+                            }
+
+                            .col-7 {
+                                position: relative;
+                                top: 96px;
+
+                                .col-6,
+                                .col-5 {
+                                    .card {
+                                        background: #FFF2E6;
+                                        border-radius: 4px;
+                                    }
+                                }
+
+                                .col-5 {
+                                    margin-top: 32px;
+                                }
+
+                                .col-7 {
+                                    margin-top: 32px;
+                                    .card {
+                                        background: #FFFFFF;
+                                        box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.04);
+                                        border-radius: 4px;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                    h1 {
+                        text-transform: capitalize;
+                        color: @mainColor;
+                        .fontProperties(700, 66px, 64px);
+                    }
+
+                    button {
+                        .fontProperties(700, 14px, 17px);
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: @mainColor;
+                        padding: 15px 38px;
+                        background-color: #ffffff;
+                        border: 1px solid @mainColor;
+                        border-radius: 4px;
+                    }
                 }
             }
         }
